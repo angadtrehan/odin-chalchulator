@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: bisque;
+}
+.calculator-body {
+    background-color: rgb(68, 46, 46);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+}
+.result {
+    flex: 0;
+    flex-basis: 10vh;
+    width: 60vh;
+    background-color: black;
+    color: green;
+    text-align: right;
+    font-size: 10vh;
+    overflow-x: scroll;
+    line-height: 10vh;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+    align-content: start;
+    gap: 5px;
+}
+.button {
+    flex: 0;
+    height: calc((60vh - 15px)/4);
+    flex-basis: calc((60vh - 15px)/4);
+    border-radius: 10px;
+    background-color: aqua;
+    text-align: center;
+    line-height: calc((60vh - 15px)/4);
+    cursor: pointer;
+    font-size: 3vh;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.495);
+}
+#equals {
+    flex: 1;
+}
+.func {
+    background-color: rgb(169, 205, 111);
+}
+.operator {
+    background-color: rgb(203, 185, 82);
+}
+.inputs {
+    background-color: silver;
+}
+.pressed-button {
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.565), -5px -5px 10px rgba(0, 0, 0, 0.495);    
+}
+
+.blinker {
+    display: inline-block;
+    height: 7vh;
+    width: 2px;
+    background-color: green;
+}
