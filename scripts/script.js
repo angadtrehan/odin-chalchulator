@@ -4,14 +4,21 @@ function toggleBlinker() {
     blinker.classList.toggle("blinker");
     setTimeout(toggleBlinker, 500);
 }
+function addPressed(button) {
+    button.classList.add("pressed-button");
+}
+
+function removePressed(button) {
+    button.classList.remove("pressed-button");
+}
 
 function selectOperator(button) {
     const operators = document.querySelectorAll(".operator");
     for (const op of operators) {
         if (op.id === button.id && button.id !== "equals") {
-            op.classList.add("pressed-button");
+            addPressed(op);
         } else {
-            op.classList.remove("pressed-button");
+            removePressed(op);
         }
     }
 }
@@ -28,18 +35,18 @@ for (const button of buttons.children) {
         })
         button.addEventListener('mousedown', () => {
             button.classList.add("pressed-button");
-        });
-        button.addEventListener('mouseup', () => {
-            button.classList.remove("pressed-button");
+            setTimeout(() => {
+                removePressed(button);
+            }, 200);
         });
     } else {
         button.addEventListener('mousedown', () => {
             button.classList.add("pressed-button");
-        });
-        button.addEventListener('mouseup', () => {
-            button.classList.remove("pressed-button");
+            setTimeout(() => {
+                removePressed(button);
+            }, 200);
         });
     }
 }
-// toggleBlinker();
+toggleBlinker();
 
