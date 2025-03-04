@@ -83,12 +83,12 @@ body {
     color: rgb(81, 81, 81);
 }
 .highlight {
-    background-color: red;
+    background-color: rgb(183, 1, 1);
 }
 
 .result span {
     display: inline-block;
-    height: 7vh;
+    height: 8vh;
     width: 2px;
 }
 .blinker {
