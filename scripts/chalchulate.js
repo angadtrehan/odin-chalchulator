@@ -31,7 +31,7 @@ function wrapInDisplay(num) {
     return num;
 }
 function handleNumberInput(number) {
-    result.textContent = (newNum) ? (number === ".") ? result.textContent + number : number : (result.textContent.length === 10) ? result.textContent : result.textContent + number;
+    result.textContent = (newNum) ? (number === ".") ? result.textContent + number : number : (result.textContent.length === 10) ? result.textContent : (result.textContent.includes(".") && number === ".") ? result.textContent : result.textContent + number;
     newNum = false;
     right = parseFloat(result.textContent);
     console.log(right);
