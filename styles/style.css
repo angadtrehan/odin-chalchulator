@@ -33,9 +33,13 @@ body {
     color: green;
     text-align: right;
     font-size: 10vh;
-    overflow-x: scroll;
+    overflow: hidden;
     line-height: 10vh;
     border: 2px solid rgb(0, 0, 0);
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
 }
 
 .buttons {
@@ -74,9 +78,19 @@ body {
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.565), -5px -5px 10px rgba(0, 0, 0, 0.495);    
 }
 
-.blinker {
+.grey-out {
+    background-color: grey;
+    color: rgb(81, 81, 81);
+}
+.highlight {
+    background-color: red;
+}
+
+.result span {
     display: inline-block;
     height: 7vh;
     width: 2px;
+}
+.blinker {
     background-color: green;
 }
